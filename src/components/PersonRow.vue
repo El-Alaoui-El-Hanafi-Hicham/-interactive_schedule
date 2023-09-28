@@ -1,7 +1,5 @@
-<!-- PersonRow.vue -->
 <template>
     <div class="person-cell">{{ person }}</div>
-    <!-- Schedule content goes here -->
 </template>
 
 <script>
