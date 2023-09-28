@@ -181,13 +181,11 @@ export default {
     };
     // Function to reset the form data to its initial state
     const cleanForm = () => {
-      formData.value = {
-        startDay: "",
-        person: "",
-        subject: "",
-        duration: 1,
-      };
-    };
+      formData.value.duration=1
+formData.value.person=''
+formData.value.startDay=''
+formData.value.subject=""
+};
     const isSelected = (day, person) => {
       const id = days.indexOf(day) + "-" + person;
 
@@ -197,9 +195,7 @@ export default {
     onMounted(() => {
       getBlock();
     });
-    watch(formData.value, () => {
-      isValidFormF();
-    });
+  
 
     return {
       days,

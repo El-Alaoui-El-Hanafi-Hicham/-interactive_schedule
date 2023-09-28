@@ -1,4 +1,4 @@
-import { ref } from "vue";
+import { ref, watch } from "vue";
 import { useMainStore } from "../store/mainStore";
 
 export const useModal = () => {
@@ -101,6 +101,10 @@ export const useModal = () => {
     }
   };
 
+  watch(formData.value, () => {
+    isValidFormF();
+    console.log("changing")
+  });
   /*************************************** */
   ///**** End Modal Functions  ******/
   /*************************************** */

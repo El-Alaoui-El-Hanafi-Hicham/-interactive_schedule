@@ -64,14 +64,21 @@ const props = defineProps([
  
 </script>
 <script >
+import { watch } from 'vue';
  export default {
-
   setup:()=>{
     this.$emit('addBlockToSchedule')
  this.$emit('close');
+watch(() => props.formData, () => {
+      console.log(
+        "Watch props.selected function called with args:",
+       
+      );
+    });
 
   },
 };
+
 
 </script>
 
