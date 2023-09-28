@@ -35,13 +35,13 @@ export const useMouseEvents = (formData, showModal, Alert) => {
   };
 
   // Function to handle the drop event when a block is dropped onto a person's schedule
-  const OnDrop = (event, person) => {
+  const OnDrop = (event, person,day) => {
     //TODO: Add the dragged block to the person's schedule in the store
     //TODO: Reset the dndBlock object
     //TODO: Display a success alert indicating that the block has been moved
     //TODO: Update the displayed schedule
     isDragging.value = false;
-    store.MoveBlock(SelectedPerson.value, person);
+    store.MoveBlock(SelectedPerson.value, person,day);
     dndBlock = {};
     Alert("Success!", "Block Moved to " + person + " successfully", "success");
     // getBlock();

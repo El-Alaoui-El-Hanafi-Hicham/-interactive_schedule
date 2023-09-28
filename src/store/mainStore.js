@@ -27,8 +27,14 @@ export const useMainStore = defineStore('MainStore', {
       this.block[person]=b
       return true
     },
-    MoveBlock(oldPerson,newPerson){
-this.block[newPerson]=this.block[oldPerson]
+    MoveBlock(oldPerson,newPerson,day){
+        this.block[newPerson]=this.block[oldPerson]
+        let endDay=this.days.indexOf(day) +this.block[newPerson]["duration"]- 1
+        if(endDay >=5){
+
+            this.block[newPerson]["duration"]=5-this.days.indexOf(day)
+            }
+this.block[newPerson]["startDay"]=day
 delete this.block[oldPerson]
     },
 GrowBlock(person){
