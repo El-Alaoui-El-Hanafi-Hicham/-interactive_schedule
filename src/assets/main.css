@@ -69,7 +69,7 @@ main{
 .person-cell,
 .details-cell {
   width: 100px;
-  padding: 15px;
+  padding: 15px 5px ;
 }
 .schedule-block {
   width: 100%;

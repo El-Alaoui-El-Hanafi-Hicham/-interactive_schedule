@@ -3,7 +3,7 @@ import { defineStore } from 'pinia';
 export const useMainStore = defineStore('MainStore', {
   state: () => ({
     days: ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday'],
-    persons: ['Person 1', 'Person 2', 'Person 3','Person 4', 'Person 5', 'Person 6'],
+    persons: ['Jack', 'Alexander', 'James','Oliver', 'Henry', 'Noah'],
     block: {
     
     }
