@@ -69,10 +69,7 @@ const props = defineProps([
   setup:()=>{
     this.$emit('addBlockToSchedule')
  this.$emit('close');
-//     const store = useMainStore();
-//     const block = store.getBlock;
-//     console.log(block)
-// return {block}
+
   },
 };
 

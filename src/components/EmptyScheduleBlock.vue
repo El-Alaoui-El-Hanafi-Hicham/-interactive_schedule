@@ -41,7 +41,6 @@ export default {
     const store =useMainStore();
     const days = store.getDays;
     const block =ref(store.getBlock)
-  // Function to check if a specific day for a person is selected (hovered)
 
     
 

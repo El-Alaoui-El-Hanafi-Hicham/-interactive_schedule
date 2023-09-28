@@ -28,7 +28,6 @@ export const useMainStore = defineStore('MainStore', {
       return true
     },
     MoveBlock(oldPerson,newPerson){
-        console.log(oldPerson)
 this.block[newPerson]=this.block[oldPerson]
 delete this.block[oldPerson]
     },

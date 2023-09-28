@@ -77,13 +77,11 @@ export default {
     };
     const GrowLeftBlock = (person) => {
       if (store.GrowBlock(person)) {
-        console.log("Block growed");
       }
     };
 
     const GrowRightBlock = (person) => {
       if (store.ShrinkBlock(person)) {
-        console.log("Block Shrinked");
       }
     };
 
@@ -97,6 +95,5 @@ export default {
       GrowLeftBlock,
     };
   },
-  // Add your methods here
 };
 </script>

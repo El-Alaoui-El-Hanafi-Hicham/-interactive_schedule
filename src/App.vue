@@ -200,7 +200,6 @@ export default {
     watch(formData.value, () => {
       isValidFormF();
     });
-    console.log(hoveredDivs);
 
     return {
       days,
