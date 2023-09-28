@@ -8,7 +8,7 @@
       :style="{
         width:
           isBlockInRange(person, day) === 'isStartDayIndex'
-            ? `calc(100% / calc(7 - ${block[person]['duration']}))`
+            ? `${Math.floor(`calc(100% / calc(7 - ${block[person]['duration']}))`)}`
             : 'calc(100% / 7)',
       }"
       :class="{

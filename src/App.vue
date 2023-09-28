@@ -2,7 +2,9 @@
 
 <template>
   <div class="card">
-    <div class="card-header">Hello</div>
+    <div class="card-header">
+      <span class="display-6 ">Interactive Schedule</span>
+      </div>
     <main class="card-body">
       <header-row></header-row>
       <div v-for="person in persons" :key="person" class="person-row">
@@ -38,6 +40,7 @@
         @addBlockToSchedule="addBlockToSchedule"
         :days="days"
         :persons="persons"
+        :block="block"
         v-if="isModalVisible"
         :formData="formData"
         :isModalVisible="isModalVisible"

@@ -6,7 +6,7 @@
     <div class="modal-content">
             <div class="modal-header">
            <!-- Modal content goes here -->
-        <h2>ADD BLOCK </h2>
+        <h2>{{block[formData.person]!=undefined ? "EDIT BLOCK":"ADD BLOCK" }}</h2>
             </div>
         <form @submit.prevent="emit('addBlockToSchedule')">
             <div class="modal-body">
@@ -39,7 +39,7 @@
           
             </div>
           <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" @click="emit('close')" data-bs-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-secondary" @click="emit('close')" data-bs-dismiss="modal">Cancel</button>
           <button type="submit"  class="btn btn-primary"   :disabled="!isValidForm">{{isValidForm ?"Add Block" : "Fix Errors"}}</button>
       </div>
         </form>
@@ -48,28 +48,34 @@
   </div>
 </template>
 <script setup>
+import { useMainStore } from "../store/mainStore";
+
 const props = defineProps([
   'formData',
   'days',
   "persons",
   "isModalVisible",
   "isValidForm",
-  "formErrors"
+  "formErrors",
+  "block"
 
  ])
- const emit = defineEmits(["addBlockToSchedule","close"])
+  const emit = defineEmits(["addBlockToSchedule","close"])
+ 
 </script>
-<script>
-
-import { computed, onMounted, watch } from 'vue';
-export default {
+<script >
+ export default {
 
   setup:()=>{
- this.$emit('addBlockToSchedule')
+    this.$emit('addBlockToSchedule')
  this.$emit('close');
-
+//     const store = useMainStore();
+//     const block = store.getBlock;
+//     console.log(block)
+// return {block}
   },
 };
+
 </script>
 
 <style scoped>
