@@ -1,0 +1,124 @@
+@import './base.css';
+
+#app {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr); /* 6 columns for 5 days + Persons/Days */
+  gap: 5px;
+  width: 100%;
+
+}
+.card {
+  width: 70vw;
+  height: 10vh;
+ 
+position: absolute; 
+  left: 0; 
+  right: 0; 
+  margin-left: auto; 
+  margin-right: auto; 
+  padding: 0;
+}
+main{
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+.hovered-background {
+  background-color: lightcoral; /* Change to the desired background color on hover */
+}
+.hidden {
+  display: none;
+}
+.header-row {
+  display: flex;
+  justify-content: space-between;
+  background-color: #f0f0f0;
+  font-weight: bold;
+  /* padding: 15px 0; */
+}
+.isScheduled {
+  background: red;
+  flex: 2 auto !important;
+  border-radius: 30px;
+  margin: 1px;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+.selected{
+  background-color: green;
+}
+.show{
+  display: block!important;
+}
+.header-cell,
+.schedule-cell {
+  border: 1px solid #ccc;
+  height: 100%;
+  width: calc(100% / 7);
+  text-align: center;
+  position: relative;
+}
+.header-cell{
+  padding: 15px 0;
+
+  
+}
+.person-cell,
+.details-cell {
+  width: 100px;
+  padding: 15px;
+}
+.schedule-block {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex: 1 auto;
+  
+}
+.person-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 100%;
+}
+.disabledCell {
+  pointer-events: none;
+  background: gray;
+}
+.block-text{
+  position: absolute;
+  margin: auto;
+}
+.droppable{
+  position: relative;
+}
+.droppable::after{
+  background-color: black;
+  content: "Drop here!!!";
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.ResizeLeft,.ResizeRight{
+position: absolute;
+height: 100%;
+background: rgb(213, 0, 0);
+width: 5px;
+color: white;
+}
+.ResizeLeft{
+  left: 0;
+}
+.ResizeRight{
+  right: 0;
+}
