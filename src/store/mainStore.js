@@ -5,16 +5,7 @@ export const useMainStore = defineStore('MainStore', {
     days: ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday'],
     persons: ['Person 1', 'Person 2', 'Person 3','Person 4', 'Person 5', 'Person 6'],
     block: {
-      'Person 1': {
-        startDay: 'Monday',
-        duration: 3,
-        subject: 'Math'
-      },
-      'Person 2': {
-        startDay: 'Wednesday',
-        duration: 3,
-        subject: 'Math'
-      }
+    
     }
   }),
   getters:{
