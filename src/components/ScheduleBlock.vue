@@ -76,12 +76,12 @@ export default {
       );
     };
     const GrowLeftBlock = (person) => {
-      if (store.GrowBlock(person)) {
+      if (store.GrowBlockLeft(person)) {
       }
     };
 
     const GrowRightBlock = (person) => {
-      if (store.ShrinkBlock(person)) {
+      if (store.GrowBlockRight(person)) {
       }
     };
 

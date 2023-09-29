@@ -12,10 +12,10 @@
       }"
       :id="days.indexOf(day) + '-' + person"
       @drop.prevent="$emit('onDrop',$event, person,day)"
-      @click="$emit('showModal',person, day)"
-      @mousemove="$emit('handleMouseMove',$event, day, person)"
-      @mousedown="$emit('onMouseDown',day, person, $event)"
-      @mouseup="$emit('handleMouseUp')"
+      @click.left="$emit('showModal',person, day)"
+      @mousemove.left="$emit('handleMouseMove',$event, day, person)"
+      @mousedown.left="$emit('onMouseDown',day, person, $event)"
+      @mouseup.left="$emit('handleMouseUp')"
     >{{isDragging?"drop Here" :""}}</div>
   </div>
 </template>

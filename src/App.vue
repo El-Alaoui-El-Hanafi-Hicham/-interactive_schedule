@@ -3,8 +3,8 @@
 <template>
   <div class="card">
     <div class="card-header">
-      <span class="display-6 ">Interactive Schedule</span>
-      </div>
+      <span class="display-6">Interactive Schedule</span>
+    </div>
     <main class="card-body">
       <header-row></header-row>
       <div v-for="person in persons" :key="person" class="person-row">
@@ -181,11 +181,11 @@ export default {
     };
     // Function to reset the form data to its initial state
     const cleanForm = () => {
-      formData.value.duration=1
-formData.value.person=''
-formData.value.startDay=''
-formData.value.subject=""
-};
+      formData.value.duration = 1;
+      formData.value.person = "";
+      formData.value.startDay = "";
+      formData.value.subject = "";
+    };
     const isSelected = (day, person) => {
       const id = days.indexOf(day) + "-" + person;
 
@@ -195,7 +195,6 @@ formData.value.subject=""
     onMounted(() => {
       getBlock();
     });
-  
 
     return {
       days,
